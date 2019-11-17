@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Camera camera;
     public Vector3 moveRange = new Vector3(5.0f, 3.0f, 8.0f);
+    public float Yoffset = 0.0f;
     public float InitAnimSpeed = 1.0f;
 
     // Start is called before the first frame update
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3
         {
             x = Mathf.Clamp(transform.position.x, cameraPos.x-moveRange.x, cameraPos.x+moveRange.x),
-            y = Mathf.Clamp(transform.position.y, cameraPos.y-moveRange.y, cameraPos.y+moveRange.y),
+            y = Mathf.Clamp(transform.position.y, cameraPos.y-moveRange.y+Yoffset, cameraPos.y+moveRange.y+Yoffset),
             z = cameraPos.z+moveRange.z
         };       
     }
