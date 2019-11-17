@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Camera camera;
+    public new Camera camera;
     public Vector3 moveRange = new Vector3(5.0f, 3.0f, 8.0f);
     public float Yoffset = 0.0f;
     public float InitAnimSpeed = 1.0f;
